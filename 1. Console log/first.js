@@ -1,4 +1,4 @@
-fullName="John Doe";
+fullName="Sudhanshu Taneja";
 console.log(fullName);
 
 age = 25; 
