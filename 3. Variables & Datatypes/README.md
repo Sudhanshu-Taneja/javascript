@@ -11,7 +11,7 @@ Once we comment out the code which tries to update a const variable, it'll resul
 ![alt text](success_output.png)
 
 # Datatypes
-Various datatypes within javascript includes - 
+Various primitive datatypes (call by value) within javascript includes - 
 1. number => 2 to power 53
 2. bigint => Big integer values
 3. string => " "
@@ -21,6 +21,13 @@ Various datatypes within javascript includes -
 7. symbol => Find uniqueness of a component.
 
 ![alt text](datatype.png)
+
+Non-primitive (reference) datatypes includes - 
+1. Array
+2. Objects
+3. Functions 
+
+![alt text](non_primitive.png)
 
 # Conversion of datatypes
 
