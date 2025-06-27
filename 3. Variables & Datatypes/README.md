@@ -43,3 +43,19 @@ In case the value passed is null in the variable, it'll give the output as 0.
 2. toBoolean - In order to convert a variable to boolean, we can just use "Boolean". In numbers, 1 means true while 0 means false. In string, an mpty string means false, while otherwise it means true.
 
 ![alt text](toBoolean.png)
+
+# Memory types
+
+1. Stack - 
+    a. Used for primitive data-types.
+    b. A copy of the variable will be provided whenever used and thus, it won't change if the copy is changed.
+
+    ![alt text](stack_memory.png)
+
+2. Heap - 
+    a. Used for non-primitive data-types.
+    b. A reference of the variable will be provided whenever used and thus, the data of the variable will change wherever used.
+
+    ![alt text](heap_memory.png)
+
+![alt text](memory.png)
