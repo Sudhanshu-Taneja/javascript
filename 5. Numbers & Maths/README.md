@@ -28,3 +28,7 @@ It's an in-built object in javascript that allows you to perform mathematical ta
 5. min - Returns the minimum value in an array.
 6. max - Returns the maximum value in an array.
 7. random - Returns a random value in between 0 & 1, both included.
+
+![alt text](image.png)
+
+![alt text](image-1.png)
