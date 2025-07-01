@@ -14,3 +14,11 @@ Objects can be declared in 2 ways -
 ![alt text](images/constructor_code.png)
 
 ![alt text](images/constructor_output.png)
+
+# Destructring objects
+
+We can de-structure the object and save it's values into different variables.
+
+![alt text](images/destructuring.png)
+
+![alt text](images/destructure_output.png)

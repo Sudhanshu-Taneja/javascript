@@ -11,24 +11,27 @@ const loginDetails = {
 }
 
 newUser.details = loginDetails;
-console.log(newUser);
+// console.log(newUser);
 
-const obj1 = {
-    1: "a",
-    2: "b"
-};
-const obj2 = {
-    3: "c",
-    4: "d"
-};
+// const obj1 = {
+//     1: "a",
+//     2: "b"
+// };
+// const obj2 = {
+//     3: "c",
+//     4: "d"
+// };
 
-const obj3 = Object.assign(obj2,obj1);
-console.log(obj3);
+// const obj3 = Object.assign(obj2,obj1);
+// console.log(obj3);
 
-const obj4 = {...obj1, ...obj2};
-console.log(obj4);
+// const obj4 = {...obj1, ...obj2};
+// console.log(obj4);
 
-console.log(Object.keys(newUser));
-console.log(Object.values(newUser));
+// console.log(Object.keys(newUser));
+// console.log(Object.values(newUser));
 
-console.log(newUser.hasOwnProperty('isLoggedIn'));
+// console.log(newUser.hasOwnProperty('isLoggedIn'));
+
+const {details: userDetails} = newUser; // Destructuring
+console.log(userDetails);
