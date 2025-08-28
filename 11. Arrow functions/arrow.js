@@ -7,18 +7,18 @@ const user ={
     }
 }
 
-// // Default context
-// user.welcomeMessage();
+// Default context
+user.welcomeMessage();
 
-// // Changing the context
+// Changing the context
 
-// user.username = "Manoj"
-// user.welcomeMessage();
+user.username = "Manoj"
+user.welcomeMessage();
 
-// function test() {
-//     let name = "Sudhanshu"
-//     console.log(this.name);
-// }
+function test() {
+    let name = "Sudhanshu"
+    console.log(this.name);
+}
 
 // test();
 
