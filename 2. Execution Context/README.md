@@ -1,22 +1,33 @@
-# Execution context
-1. Everything in java script is executed inside a execution context.
+## JavaScript Execution Context
 
-2. It is a big box and it has 2 components in it -
-    
-    Memory component (Variable environment) - All the variables are stored in the form of key, value pair. All the functions are also stored in it.
-    
-    Code component (Thread of execution)- The entire code is executed within this, line by line.
+The execution context is the environment in which JavaScript code is evaluated and executed. Understanding it is crucial for grasping how variables, functions, and scope work in JavaScript.
 
-3. JS executes the code in 2 phases - 
+### Key Concepts
 
-    3.1 In the 1st phase of execution, it just saves all the variable values as undefined and saves the functions. 
+- **Global Execution Context:** Created when the JavaScript engine starts executing code. It contains global variables and functions.
+- **Function Execution Context:** Created whenever a function is invoked. Each function call gets its own context.
+- **Components:**
+  - **Memory Component (Variable Environment):** Stores variables and function declarations as key-value pairs.
+  - **Code Component (Thread of Execution):** Executes code line by line.
 
-    ![alt text](<1st phase.png>)
-    
-    3.2 In the 2nd phase, it executes the code and assign the respective value of variables.
-    
-    ![alt text](<2nd phase part 1.png>)
-    
-    3.3 During the 2nd phase of execution of code, if the code encounters a function, it creates an all together new execution context.
-    
-    ![alt text](<2nd phase part 2.png>)
+### Phases of Execution
+
+1. **Creation Phase:**
+    - Allocates memory for variables and functions.
+    - Variables are initialized with `undefined`.
+    - Functions are stored as references.
+    - ![Creation Phase](1st%20phase.png)
+
+2. **Execution Phase:**
+    - Code is executed line by line.
+    - Variables are assigned actual values.
+    - If a function is called, a new execution context is created for it.
+    - ![Execution Phase](2nd%20phase%20part%201.png)
+    - ![Function Context](2nd%20phase%20part%202.png)
+
+### Visuals
+
+The diagrams above illustrate how memory and code components work during each phase.
+
+---
+Understanding execution context helps in debugging, managing scope, and writing efficient JavaScript code.

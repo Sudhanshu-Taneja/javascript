@@ -1,26 +1,35 @@
-# Arrays
+## Arrays in JavaScript
 
-In javascript, array aren't primitives but are instead Array objects with following characteristics - 
+Arrays are objects used to store multiple values in a single variable. They are resizable, zero-indexed, and can hold elements of different types.
 
-1. They are resizable and can contain a mix of different datatypes.
-2. They are not associated arrays and thus, array elements can't be accessed using arbitrary strings.
-3. They are zero-indexed. 
-4. The copy operations create shallow copies, i.e., the copy of the array share the same reference.
+### Key Concepts
 
-Various methods provided for arrays are - 
+- **Resizable:** Arrays can grow or shrink in size.
+- **Zero-indexed:** The first element is at index 0.
+- **Shallow Copy:** Copying an array creates a new reference, but nested objects are still shared.
 
-1. push - It adds the value at the end in the array.
-2. pop - It removes the last value from the array.
-3. unshift - It adds the value at the start in the array.
-4. shift - It removes the first value from the array.
-5. includes - It checks if the value is present in an array or not.
-6. index - It gives the index of the value you're looking for. In case the value is not present, it returns "-1".
-7. join - It binds the array and returns it in type of string.
-8. concat - It adds an array into another array.
-9. spread - It breaks the array into individual items and merge all the items.
-10. flat - It returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-11. of - Returns a new array from the set of elements.
+### Common Array Methods
 
-![alt text](code.png)
+- **push()**: Add an element to the end
+- **pop()**: Remove the last element
+- **unshift()**: Add an element to the start
+- **shift()**: Remove the first element
+- **includes()**: Check if a value exists
+- **indexOf()**: Get the index of a value
+- **join()**: Combine elements into a string
+- **concat()**: Merge arrays
+- **spread (`...`)**: Expand array elements
+- **flat()**: Flatten nested arrays
+- **Array.of()**: Create a new array from arguments
 
-![alt text](output.png)
+### Examples
+
+```js
+let arr = [1, 2, 3];
+arr.push(4); // [1,2,3,4]
+console.log(arr.includes(2)); // true
+let flatArr = [1, [2, 3]].flat(); // [1,2,3]
+```
+
+![Array Code](code.png)
+![Array Output](output.png)

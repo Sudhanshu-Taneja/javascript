@@ -45,3 +45,23 @@ Loops are fundamental programming constructs that allow you to execute a block o
 	```
 
 Each loop type serves different use cases, and understanding them helps write more efficient and readable JavaScript code.
+
+### Break and Continue Statements
+
+- **break**: Exits the loop immediately, even if the condition is still true.
+	```js
+	for (let i = 0; i < 10; i++) {
+		if (i === 5) break;
+		console.log(i); // Prints 0 to 4
+	}
+	```
+
+- **continue**: Skips the current iteration and moves to the next one.
+	```js
+	for (let i = 0; i < 5; i++) {
+		if (i === 2) continue;
+		console.log(i); // Prints 0, 1, 3, 4
+	}
+	```
+
+These statements help control the flow of loops for more flexible logic.

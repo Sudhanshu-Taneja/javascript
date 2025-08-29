@@ -1,19 +1,32 @@
-# Operators
+## Control Flow and Operators in JavaScript
 
-1. "<" stands for less than.
-2. ">" stands for greater than.
-3. "<=" stands for less than or equal to.
-4. ">=" stands for greater than or equal to.
-5. "==" checks if the 2 values are equal.
-6. "!=" checks if the values are not equal.
-7. "===" checks the type of variable along with the value.
-8. "!==" is the strict inequality operator where it checks both the type and value of variable.
-9. "&&" is the and operator.
-10. "||" is the or operator.
-11. "??" is the nullish coalescing operator. It returns the right hand side operand when its left hand side operand is null or undefined.
+Control flow determines the order in which statements are executed in a program. Operators are used to perform comparisons and logical operations.
 
-# Values
+### Key Concepts
 
-Falsy - false, 0, -0, BigInt 0n, "", null, undefined, NaN
+- **Comparison Operators:**
+	- `<` : Less than
+	- `>` : Greater than
+	- `<=` : Less than or equal to
+	- `>=` : Greater than or equal to
+	- `==` : Equality (loose, type-converting)
+	- `!=` : Inequality (loose)
+	- `===` : Strict equality (no type conversion)
+	- `!==` : Strict inequality
 
-Truthy - "0", 'false', " ", [], {}, function(){}
+- **Logical Operators:**
+	- `&&` : Logical AND
+	- `||` : Logical OR
+	- `??` : Nullish coalescing (returns right-hand side if left is null/undefined)
+
+### Truthy and Falsy Values
+
+- **Falsy:** `false`, `0`, `-0`, `BigInt 0n`, `""`, `null`, `undefined`, `NaN`
+- **Truthy:** `"0"`, `'false'`, `" "`, `[]`, `{}`, `function(){}`
+
+### Example
+
+```js
+if (0) { console.log("Falsy"); } // Won't run
+if ("0") { console.log("Truthy"); } // Will run
+```

@@ -1,9 +1,25 @@
-# Global & Local scope
+## Scope in JavaScript
 
-Global scope - Variables and functions declared in the global scope are accessible from anywhere in the entire JavaScript program.
+Scope determines the accessibility of variables and functions in different parts of your code.
 
-Local scope - Local scope refers to the accessibility of variables and functions within a specific, confined part of the code like functions, if-else block, for loop etc.
+### Key Concepts
 
-![alt text](images/code.png)
+- **Global Scope:**
+	- Variables/functions declared outside any function or block are accessible everywhere.
+- **Local Scope:**
+	- Variables/functions declared inside a function or block are only accessible within that context.
 
-![alt text](images/output.png)
+### Example
+
+```js
+let globalVar = "I am global";
+function testScope() {
+	let localVar = "I am local";
+	console.log(globalVar); // Accessible
+	console.log(localVar);  // Accessible
+}
+// console.log(localVar); // Error: not defined
+```
+
+![Scope Code](images/code.png)
+![Scope Output](images/output.png)

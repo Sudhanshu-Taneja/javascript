@@ -1,24 +1,41 @@
-# Objects
+## Objects in JavaScript
 
-Objects can be declared in 2 ways - 
+Objects are collections of key-value pairs used to store and organize data. They can be created using literals or constructors.
 
-1. Via literals - There can be multiple instances of an object if you create via literals. It is declared in a key value pair.
+### Key Concepts
 
-![alt text](images/code.png)
+- **Object Literals:**
+	- Multiple instances can be created.
+	- Syntax: `{ key: value }`
 
-![alt text](images/output.png)
+```js
+const person = { name: "Alice", age: 30 };
+```
 
+![Object Literal Example](images/code.png)
+![Object Output](images/output.png)
 
-2. Via constructors - If you create an object via constructor, then it's created as singleton, i.e., there is only 1 type of this object.
+- **Object Constructors:**
+	- Used to create singleton or multiple objects using functions.
 
-![alt text](images/constructor_code.png)
+```js
+function Car(model) {
+	this.model = model;
+}
+const myCar = new Car("Toyota");
+```
 
-![alt text](images/constructor_output.png)
+![Constructor Example](images/constructor_code.png)
+![Constructor Output](images/constructor_output.png)
 
-# Destructring objects
+### Object Destructuring
 
-We can de-structure the object and save it's values into different variables.
+Destructuring allows extracting values from objects into variables:
 
-![alt text](images/destructuring.png)
+```js
+const user = { id: 1, username: "bob" };
+const { id, username } = user;
+```
 
-![alt text](images/destructure_output.png)
+![Destructuring Example](images/destructuring.png)
+![Destructure Output](images/destructure_output.png)

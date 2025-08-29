@@ -1,10 +1,21 @@
-# Functions
+## Functions in JavaScript
 
-Functions is a block of code desined to perfrom a particular task. Different values that are passed are - 
+Functions are reusable blocks of code designed to perform specific tasks. They help organize code and avoid repetition.
 
-Parameters - The values that are passed in the function definition.
-Arguments - The values that are pass while calling the function.
+### Key Concepts
 
-![alt text](images/output.png)
+- **Function Declaration:**
+	- Syntax: `function name(params) { ... }`
+- **Parameters:** Variables listed in the function definition.
+- **Arguments:** Values passed to the function when called.
 
-![alt text](images/output.png)
+### Example
+
+```js
+function greet(name) {
+	return `Hello, ${name}!`;
+}
+console.log(greet("Alice")); // Hello, Alice!
+```
+
+![Function Output](images/output.png)
