@@ -6,10 +6,11 @@ Loops are fundamental programming constructs that allow you to execute a block o
 
 - **for loop**: Used when the number of iterations is known. It consists of an initialization, a condition, and an increment/decrement statement.
 	```js
-	for (let i = 0; i < 5; i++) {
+	for (let i = 0; i < 10; i++) {
 		console.log(i);
 	}
 	```
+    ![alt text](images/for_loop.png)
 
 - **while loop**: Executes a block of code as long as a specified condition is true. Useful when the number of iterations is not known in advance.
 	```js
@@ -19,6 +20,7 @@ Loops are fundamental programming constructs that allow you to execute a block o
 		i++;
 	}
 	```
+    ![alt text](images/while_loop.png)
 
 - **do...while loop**: Similar to the while loop, but guarantees that the code block runs at least once before checking the condition.
 	```js
@@ -28,6 +30,7 @@ Loops are fundamental programming constructs that allow you to execute a block o
 		i++;
 	} while (i < 5);
 	```
+    ![alt text](images/do_while_loop.png)
 
 - **for...of loop**: Iterates over iterable objects like arrays, strings, etc.
 	```js
@@ -50,18 +53,27 @@ Each loop type serves different use cases, and understanding them helps write mo
 
 - **break**: Exits the loop immediately, even if the condition is still true.
 	```js
-	for (let i = 0; i < 10; i++) {
-		if (i === 5) break;
-		console.log(i); // Prints 0 to 4
-	}
+	for (let index = 0; index < 10; index++) {
+        const element = index;   
+        console.log(element);
+        if (element === 5) {
+            console.log("Breaking the loop");
+            break;
+        }
+    }
 	```
+    ![alt text](images/break.png)
 
 - **continue**: Skips the current iteration and moves to the next one.
 	```js
-	for (let i = 0; i < 5; i++) {
-		if (i === 2) continue;
-		console.log(i); // Prints 0, 1, 3, 4
-	}
+	for (let index = 0; index < 10; index++) {
+        const element = index;   
+        if (element === 5) {
+            continue;
+        }
+        console.log(element);
+    }
 	```
+    ![alt text](images/continue.png)
 
 These statements help control the flow of loops for more flexible logic.
