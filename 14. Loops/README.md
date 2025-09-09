@@ -34,10 +34,11 @@ Loops are fundamental programming constructs that allow you to execute a block o
 
 - **for...of loop**: Iterates over iterable objects like arrays, strings, etc.
 	```js
-	for (const value of [1, 2, 3]) {
+	for (const value of [1, 2, 3, 4, 5]) {
 		console.log(value);
 	}
 	```
+	![alt text](images/for_of_loop.png)
 
 - **for...in loop**: Iterates over the enumerable properties of an object.
 	```js
