@@ -6,6 +6,13 @@ for (let index = 0; index < 10; index++) {
     
 }
 
+// For...each loop
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach((number) => {
+    console.log(number);
+});
+
 // while loop
 
 let i = 0;

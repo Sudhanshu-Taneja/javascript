@@ -42,11 +42,24 @@ Loops are fundamental programming constructs that allow you to execute a block o
 
 - **for...in loop**: Iterates over the enumerable properties of an object.
 	```js
-	const obj = {a: 1, b: 2};
+	const obj = { x: 10, y: 20, z: 30 };
 	for (const key in obj) {
-		console.log(key, obj[key]);
+		if (obj.hasOwnProperty(key)) {
+			console.log(`${key}: ${obj[key]}`);
+		}
 	}
 	```
+	![alt text](images/for_in_loop.png)
+
+
+- **for...each loop**: Iterates over the enumerable values of an array.
+	```js
+	const numbers = [1, 2, 3, 4, 5];
+	numbers.forEach((number) => {
+		console.log(number);
+	});
+	```
+	![alt text](images/forEach.png)
 
 Each loop type serves different use cases, and understanding them helps write more efficient and readable JavaScript code.
 
