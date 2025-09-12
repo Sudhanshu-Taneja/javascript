@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // Add new list item to the ul with class language
+    function addLanguage(langName) {
+        const ul = document.querySelector('.language');
+        const li = document.createElement('li');
+        li.innerHTML = langName;
+        ul.appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('Java');
+
+    function addOptiLang(langName) {
+        const li = document.createElement('li');
+        const addText = document.createTextNode(langName);
+        li.appendChild(addText);
+
+        const ul = document.querySelector('.language');
+        ul.appendChild(li);
+        
+    }
+    addOptiLang('C++');
+
+    // Edit existing list item
+    const secondLi = document.querySelector('li:nth-child(2)');
+    //secondLi.innerHTML = 'Python 3.12';
+   const newLi = document.createElement('li');
+   newLi.textContent = 'Python 3.12';
+   secondLi.replaceWith(newLi);
+
+   // Remove existing list item
+   const lastLi = document.querySelector('li:last-child');
+   lastLi.remove();
+</script>
+</html>

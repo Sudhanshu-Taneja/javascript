@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM learning</title>
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "main";
+    div.id = "mainId";
+    div.setAttribute("title", "this is a div");
+    div.style.color = "red";
+    div.style.backgroundColor = "yellow";
+   
+    const addText = document.createTextNode("this is a created text node");
+    div.appendChild(addText);
+    document.body.appendChild(div);
+
+</script>
+</html>
