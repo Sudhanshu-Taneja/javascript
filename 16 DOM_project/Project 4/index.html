@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <style>
+        body {
+            width: 300px;
+            max-width: 750px;
+            min-width: 480px;
+            margin: 0 auto;
+            background-color: #212121;
+        }
+
+        .lastResult {
+            color: white;
+            padding: 7px;
+        }
+
+        .guesses {
+            color: white;
+            padding: 7px;
+        }
+
+        #wrapper {
+            box-sizing: border-box;
+            text-align: center;
+            width: 600px;
+            height: 550px;
+            background-color: #474747;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        #guessField {
+            color: #000;
+            width: 250px;
+            height: 50px;
+            font-size: 30px;
+            border-style: none;
+            margin-top: 25px;
+            border: 5px solid #6c6d6d;
+            text-align: center;
+        }
+
+        #guess {
+            font-size: 55px;
+            margin-top: 120px;
+            color: #fff;
+        }
+
+        #guessSubmit {
+            background-color: #161616;
+            color: #ffffff;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            border-style: none;
+            margin-top: 50px;
+            /* margin-left: 75px; */
+        }
+    </style>
+</head>
+<body style="background-color: grey; color: white;">
+
+    <nav>
+        <a href="/16 DOM_project/index.html" aria-current="page">Home</a>
+    </nav>
+    <div id="wrapper">
+        <h1>Number guessing game</h1>
+        <p>Try and guess a random number between 1 and 100.</p>
+        <p>You've 10 attempts to guess the right number.</p>
+        <br>
+            <form class="form">
+                <label for="guessField" id="guess">Guess a number</label>
+                <input type="text" id="guessField" class="guessField" placeholder="Enter a number..." autofocus>
+                <input type="submit" value="Submit" id="guessSubmit">
+            </form>
+
+            <div class="resultParas">
+                <p>Previous guesses: <span class="guesses"></span></p>
+                <p>Guesses remaining: <span class="lastResult">10</span></p>
+                <p id="lowOrHi"></p>
+            </div>
+    </div>
+    <script src="guess.js"></script>
+</body>
+</html>
