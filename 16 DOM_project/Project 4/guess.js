@@ -65,7 +65,12 @@ function displayMessage(message) {
 
 function guessDisplay(guess) {
     userInput.value = "";
-    guesses.innerHTML += `${guess}, `;
+    if(guess === num) {
+        guesses.innerHTML += `${guess}`;
+    }
+    else {
+        guesses.innerHTML += `${guess}, `;
+    }
     lastResult.innerHTML = `${10-guessCount}`;
 }
 
