@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Handling in JavaScript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+
+    let time = 0;
+
+    const changeHeader =  function(int){
+        document.querySelector('h1').innerHTML = `Changing name after ${int+time}th second`;
+        time+=int;
+    }    
+
+    const intervalId = setInterval(function() {
+        changeHeader(3);
+    }, 3000);
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearInterval(intervalId);
+        console.log('Interval stopped');
+    });
+
+    document.querySelector('#start').addEventListener('click', function() {
+        setInterval(function() {
+            changeHeader(3);
+        }, 3000);
+    });
+
+
+</script>
+</html>
