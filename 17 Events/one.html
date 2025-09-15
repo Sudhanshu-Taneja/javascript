@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Random Image List</h2>
+    <ul id="imageList">
+        <li><img width="200px" id="first" src="https://picsum.photos/200?random=1" alt="Random Image 1"></li>
+        <li><img width="200px" id="second" src="https://picsum.photos/200?random=2" alt="Random Image 2"></li>
+        <li><img width="200px" id="third" src="https://picsum.photos/200?random=3" alt="Random Image 3"></li>
+        <li><img width="200px" id="fourth" src="https://picsum.photos/200?random=4" alt="Random Image 4"></li>
+        <li><img width="200px" id="fifth" src="https://picsum.photos/200?random=5" alt="Random Image 5"></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    document.getElementById('first').onclick = function() {
+        alert('You clicked on the first image!');
+    };
+
+    document.getElementById('imageList').addEventListener('click', function(e) {
+        console.log("Clicked inside the list");
+    }, false);
+    document.getElementById('first').addEventListener('click', function(e) {
+        console.log('Clicked on the first image');
+    }, false);
+    document.getElementById('second').addEventListener('click', function(e) {
+        console.log('Clicked on the second image');
+    }, true);
+    document.getElementById('third').addEventListener('click', function(e) {
+        e.stopPropagation();
+        console.log('Clicked on the third image');
+    }, false);
+    document.getElementById('google').addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('You clicked on the Google link, but default action is prevented.');
+    }, false);
+
+    document.querySelector('#imageList').addEventListener('click', function(e) {
+
+        if(e.target.tagName === 'IMG'){
+            let removeItem = e.target.parentNode;
+            removeItem.parentNode.removeChild(removeItem);
+        }
+    });
+</script>
+</html>
