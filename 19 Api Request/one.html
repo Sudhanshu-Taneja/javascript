@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: whitesmoke;">
+    <h2>API Request States in JavaScript</h2>
+    <ul>
+        <li><strong>UNSENT (0):</strong> The request has not been initialized.</li>
+        <li><strong>OPENED (1):</strong> The request has been set up.</li>
+        <li><strong>HEADERS_RECEIVED (2):</strong> The request has been sent and headers have been received.</li>
+        <li><strong>LOADING (3):</strong> The response is being downloaded.</li>
+        <li><strong>DONE (4):</strong> The request is complete and the response is fully received.</li>
+    </ul>
+</body>
+<script>
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET','https://api.github.com/users/Sudhanshu-Taneja')
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4) {
+            const data = JSON.parse(xhr.response)
+            console.log(data.public_repos);
+        }
+    }
+
+    xhr.send()
+
+</script>
+</html>
