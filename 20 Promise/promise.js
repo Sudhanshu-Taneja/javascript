@@ -81,3 +81,12 @@ async function getAllUsers(params) {
     const users = await Promise.all([promiseThree, promiseFour]);
     console.log(users);
 }
+
+fetch('https://api.github.com/users/Sudhanshu-Taneja')
+.then((res)=>res.json())
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=>{
+    console.log(error);
+});
